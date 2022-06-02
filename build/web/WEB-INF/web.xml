@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <servlet>
+        <servlet-name>HomeController</servlet-name>
+        <servlet-class>Controller.HomeController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AuthenticatorController</servlet-name>
+        <servlet-class>Controller.AuthenticatorController</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AdminHomeController</servlet-name>
+        <servlet-class>Controller.AdminHomeController</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeController</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AuthenticatorController</servlet-name>
+        <url-pattern>/login</url-pattern>
+        <url-pattern>/register</url-pattern>
+        <url-pattern>/logout</url-pattern>
+        <url-pattern>/profile</url-pattern>
+        <url-pattern>/uploadFileU</url-pattern>
+        <url-pattern>/changePassword</url-pattern>
+        <url-pattern>/forgetPassword</url-pattern>
+
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AdminHomeController</servlet-name>
+        <url-pattern>/admin</url-pattern>
+        <url-pattern>/list-product</url-pattern>
+        <url-pattern>/create-product</url-pattern>
+        <url-pattern>/create-category</url-pattern>
+        <url-pattern>/update-product</url-pattern>
+        <url-pattern>/list-cart</url-pattern>
+        <url-pattern>/list-product-cart</url-pattern>
+        <url-pattern>/send-product</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+       
+    </welcome-file-list>
+    <session-config>
+        <session-timeout>
+            30
+        </session-timeout>
+    </session-config>
+</web-app>
